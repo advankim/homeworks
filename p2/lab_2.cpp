@@ -37,8 +37,9 @@ void rozdzielNaHex(string plikWejscie, int liczbaWyjsc, string plikWyjscie1, ...
 
     for (i = 0; i < liczbaWyjsc; i++)
     {
-        fileOut[i].setf(ios::hex, ios::basefield);
-        fileOut[i].setf(fileOut[i].uppercase);
+        fileOut[i].unsetf(ios::hex);
+        fileOut[i].unsetf(ios::basefield);
+        fileOut[i].unsetf(fileOut[i].uppercase);
         fileOut[i].close();
     }
 
@@ -84,7 +85,8 @@ void polaczNaDec(string plikWyjscie, int liczbaWejsc, string plikWejscie1, ...) 
 
     for (i = 0; i < liczbaWejsc; i++)
     {
-        fileIn[i].setf(ios::hex, ios::basefield);
+        fileIn[i].unsetf(ios::hex);
+        fileIn[i].unsetf(ios::basefield);
         fileIn[i].close();
     }
 
