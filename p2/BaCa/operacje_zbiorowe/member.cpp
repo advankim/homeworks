@@ -1,3 +1,5 @@
+//Mateusz Rozdzinski
+
 bool MemberRecursive(char* sequences, int set, int i) {
     if (*(sequences + i) == ' ') {
         return MemberRecursive(sequences, set, ++i);
@@ -42,10 +44,5 @@ bool MemberRecursive(char* sequences, int set, int i) {
 bool Member(char* sequences, int set) {
     int i = 0;
 
-    if (MemberRecursive(sequences, set, i) == true) {
-        return true;
-    }
-    else {
-        return false;
-    }
+    return MemberRecursive(sequences, set, i);
 }

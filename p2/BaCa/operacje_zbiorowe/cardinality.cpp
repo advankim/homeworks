@@ -1,3 +1,5 @@
+//Mateusz Rozdzinski
+
 int CardinalityRecursive(int set, int bit, int pow) {
     if (bit != 0) {
         if (set & bit) {
@@ -13,19 +15,14 @@ int CardinalityRecursive(int set, int bit, int pow) {
 }
 
 int Cardinality(int set) {
-    if (set == 0) {
-        return 0;
+    int bit = 1;
+    int pow = 0;
+
+    if (set < 0) {
+        pow++;
     }
-    else {
-        int bit = 1;
-        int pow = 0;
 
-        bit <<= 30;
+    bit <<= 30;
 
-        if (set < 0) {
-            pow++;
-        }
-
-        return CardinalityRecursive(set, bit, pow);
-    }
-}
+    return CardinalityRecursive(set, bit, pow);
+}''
