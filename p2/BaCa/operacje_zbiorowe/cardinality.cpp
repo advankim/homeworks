@@ -1,5 +1,3 @@
-//Mateusz Rozdzinski
-
 int CardinalityRecursive(int set, int bit, int pow) {
     if (bit != 0) {
         if (set & bit) {
