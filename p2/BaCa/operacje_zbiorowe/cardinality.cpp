@@ -23,4 +23,4 @@ int Cardinality(int set) {
     bit <<= 30;
 
     return CardinalityRecursive(set, bit, pow);
-}''
+}
